@@ -1,0 +1,60 @@
+//
+//  PrefixHeader.pch
+//  功能Demo
+//
+//  Created by 123 on 15/10/20.
+//  Copyright (c) 2015年 张育豪. All rights reserved.
+//
+
+#ifndef __Demo_PrefixHeader_pch
+#define __Demo_PrefixHeader_pch
+
+#define Identifier  @"listCell"
+
+
+//HTTP请求头验证
+#define HttpHeaderFieldName @"sgin"
+
+//资源HTTP头
+#define ResHeaderURL @"http://s3.xtox.net:8180/ws/"
+
+
+//商品列表
+#define GoodsAllRequest @"http://s3.xtox.net:8180/ws/api/"
+
+//资源上传地址
+#define UploadServerURL @"http://wuse.s3.xtox.net:8888/Controllers/uploadFile.ashx"
+
+
+
+//私有(需传入httpHeaderToken进行接口访问认证)
+#define ProvideCommonServerURL @"http://s3.xtox.net:8180/ws/api"
+#define SignCode @"1111111111"
+
+
+//工长方法类
+#import "Common/Common.h"
+
+//数据模型
+#import "Model.h"
+
+
+//第三方库
+#import "Common/HttpTool.h"
+#import "Common/FMDB/fmdb/FMDB.h"
+#import "Common/AFN2.0/AFNetworking/AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "Common/JsonValidator/NSObject+CYJSONValidator.h"
+#import "Common/MJRefresh/MJRefresh.h"
+#import "Common/JSONKit/JSONKit.h"
+#import "Common/SDWebImage/UIImageView+WebCache.h"
+#import "UMSocial.h"
+#import "Common/MJExtension/MJExtension.h"
+
+
+//全局变量
+extern UserModel *g_user_model;//用户信息
+
+extern NSString *g_sign_code;//用户登录后会被记录的签名信息
+
+#endif
